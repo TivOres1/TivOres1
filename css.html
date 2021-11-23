@@ -50,7 +50,23 @@
 
             <div class="row">
                 <div class="col">
-                    
+                    <center>
+                    <p id="text">Dzień Dobry</p>
+                    <button class="btn-text-white btn-dark border" onclick="zmienTekst()">Pożegnanie</button>
+                    <button class="btn-text-white btn-dark border" onclick="zmienTekst2()">Przywitanie</button>
+                    </center>
+
+                    <script>
+                        function zmienTekst()
+                        {
+                            document.getElementById("text").innerHTML = "Do Widzenia";
+                        }
+
+                        function zmienTekst2()
+                        {
+                            document.getElementById("text").innerHTML = "Dzień Dobry";
+                        }
+                    </script>
                 </div>
             </div>
         </div>
