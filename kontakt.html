@@ -25,6 +25,33 @@
         <div class="row">
             <div class="col-xxl-8 col-xl-8 col-md-8 col-sm-12 col-xs-12 border">
 
+                <!--
+                <?php 
+                
+                $message_sent = false;
+
+                if(isset($_POST['email']) && $_POST['email'] != '') {
+                    if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) {
+                        $userEmail = $_POST['mail'];
+                        $messege = $_POST['msg'];
+                        $subject = $_POST['subject'];
+
+                        $to = "";
+                        $body = "";
+
+                        $body .= "Email: ".$userEmail. "\r\n";
+                        $body .= "Powód: " .$subject. "\r\n";
+                        $body .= "Wiadomość: ".$messege. "\r\n";
+                        
+                        mail($to,$subject,$message);
+
+                        $message_sent = true;
+                    }
+                }
+
+                ?>
+                -->
+
                 <form action="https://formsubmit.io/send/" method="POST">
                     <label for="mail" style="font-weight: 500;"><i>Twój adres e-mail: </i></label>
                     <input type="text"
@@ -34,6 +61,16 @@
                     placeholder="Wpisz swój adres e-mail" 
                     style="width: 100%;">
                     
+                    <label for="msg" style="font-weight: 500;"><i>Powód wiadomości:</i></label>
+
+                    <input type="text"
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    placeholder="Wpisz powód"
+                    style="width: 100%;"
+                    >
+
                     <label for="msg" style="font-weight: 500;"><i>Twoja wiadomość:</i></label>
 
                     <textarea type="text"
